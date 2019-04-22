@@ -1,0 +1,12 @@
+# This is a standard scatter function using matplotlib with df dataframe consisting of x and y data
+plt.scatter(auto['x'], auto['y'], label='data', color='red', marker='o')
+
+# Use seaborn regplot plot in blue a linear regression of order 1 between x and y sets of auto dataframe
+sns.regplot(x='x', y='y', data=auto, scatter=None, color='blue', label='order 1')
+
+# Use seaborn regplot plot in green a linear regression of order 2 between x and y sets of auto dataframe
+sns.regplot(x='x',y='y',data=auto,scatter=None,color='green',label='order 2',order=2)
+
+# Add a legend and display the plot
+plt.legend('upper right')
+plt.show()
