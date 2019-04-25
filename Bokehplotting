@@ -1,0 +1,18 @@
+# Import pandas as pd
+import pandas as pd
+
+# Read in the CSV file: df
+df = pd.read_csv('sample.csv')
+
+# Import figure from bokeh.plotting
+from bokeh.plotting import figure
+
+# Create the figure: p
+p = figure(x_axis_label='time', y_axis_label='share price')
+
+# Plot mpg vs hp by color
+p.circle(df['date'],df['price'],size=10,color=df['color'])
+
+# Specify the name of the output file and show the result
+output_file('share-df.html')
+show(p)
